@@ -1,0 +1,34 @@
+{
+  "name": "sveltekit-supabase-starter",
+  "private": true,
+  "version": "0.2.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "supabase db diff --schema public | supabase db push",
+    "docs:api": "typedoc --plugin typedoc-plugin-markdown --entryPointStrategy expand --entryPoints src/lib/server --out docs/api --skipErrorChecking --readme none --hideBreadcrumbs --disableSources --sort alphabetical --validation.notDocumented true",
+    "docs:api:check": "npm run docs:api && git diff --exit-code docs/api"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^7.0.1",
+    "@sveltejs/kit": "^2.63.0",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "svelte": "^5.56.1",
+    "svelte-check": "^4.6.0",
+    "typedoc": "0.28.20",
+    "typedoc-plugin-markdown": "4.6.2",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0"
+  }
+}
