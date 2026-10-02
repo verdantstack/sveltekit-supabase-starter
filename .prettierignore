@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+.svelte-kit/
+build/
+dist/
+output/
+.vercel/
+.netlify/
+.wrangler/
+
+# Generated
+*.timestamp-*
+.mypy_cache/
+.pytest_cache/
+
+# Database files
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/
+
+# Generated docs
+docs/api/
+
+# Migrations (keep SQL untouched)
+drizzle/
+
+# RLS policies (keep SQL untouched)
+rls/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# NPM cache
+.npm-cache/
